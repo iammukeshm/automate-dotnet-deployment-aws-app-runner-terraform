@@ -1,6 +1,7 @@
 name: 🚀 Deploy to App Runner
 
-on:
+on:  
+  workflow_dispatch:
   push:
     branches:
       - master
