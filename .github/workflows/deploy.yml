@@ -77,8 +77,3 @@ jobs:
       - name: 🚀 Terraform Apply
         working-directory: ./infra
         run: terraform apply -auto-approve
-        
-      - name: 🚀 Trigger App Runner Deployment
-        run: |
-          aws apprunner start-deployment \
-            --service-arn arn:aws:apprunner:${{ secrets.AWS_REGION }}:${{ secrets.AWS_ACCOUNT_ID }}:service/${{ secrets.APP_RUNNER_SERVICE_NAME }}
