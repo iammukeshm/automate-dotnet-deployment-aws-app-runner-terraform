@@ -10,7 +10,7 @@ app.UseHttpsRedirection();
 
 app.MapGet("/", () =>
 {
-    return TypedResults.Ok("Hello World - V1");
+    return TypedResults.Ok("Hello World - V2");
 })
 .WithName("HelloWorld");
 
