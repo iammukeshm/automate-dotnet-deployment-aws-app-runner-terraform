@@ -45,7 +45,6 @@ locals {
 resource "aws_apprunner_service" "api" {
   service_name                   = var.service_name
   auto_scaling_configuration_arn = aws_apprunner_auto_scaling_configuration_version.basic.arn
-
   source_configuration {
     image_repository {
       image_repository_type = "ECR"
@@ -59,7 +58,7 @@ resource "aws_apprunner_service" "api" {
       access_role_arn = aws_iam_role.apprunner_ecr_access.arn
     }
 
-    auto_deployments_enabled = false
+    auto_deployments_enabled = true
   }
 
   instance_configuration {
